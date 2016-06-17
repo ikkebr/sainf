@@ -1,14 +1,19 @@
-<html>
-    <head></head>
+{% extends 'noticias/base.html' %}
 
-    <body>
+{% block titulo %}Notícias{% endblock %}
+
+{% block conteudo %}
+
+        <h2>Últimas Notícias</h2>
         {% for cada in noticias %}
             <h1>{{ cada.titulo }}</h1>
             <h4>{{ cada.data|date:"d/m/Y"}}</h4>
             <p>{{ cada.conteudo|linebreaksbr }}</p>
+            <hr>
         {% endfor %}
-    </body>
-</html>
-
+        
+        
+        
+{% endblock %}
 
 
