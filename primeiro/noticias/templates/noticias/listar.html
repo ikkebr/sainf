@@ -1,0 +1,14 @@
+<html>
+    <head></head>
+
+    <body>
+        {% for cada in noticias %}
+            <h1>{{ cada.titulo }}</h1>
+            <h4>{{ cada.data|date:"d/m/Y"}}</h4>
+            <p>{{ cada.conteudo|linebreaksbr }}</p>
+        {% endfor %}
+    </body>
+</html>
+
+
+
